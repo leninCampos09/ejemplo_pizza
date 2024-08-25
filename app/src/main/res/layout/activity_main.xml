@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- ImageView para mostrar la imagen de la pizza -->
+
+    <!-- Selección de tamaño de pizza -->
+    <ImageView
+        android:id="@+id/imageViewPizza"
+        android:layout_width="237dp"
+        android:layout_height="107dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Imagen de Pizza"
+        android:src="@drawable/pizza_image" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seleccione su pizza"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupPizzaSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pizza Pequeña" />
+
+        <RadioButton
+            android:id="@+id/radioMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pizza Mediana"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pizza Grande" />
+    </RadioGroup>
+
+    <!-- Selección de extras -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Seleccione su extra"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:verticalScrollbarPosition="defaultPosition" />
+
+    <CheckBox
+        android:id="@+id/checkCheese"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Queso $2.00" />
+
+    <CheckBox
+        android:id="@+id/checkBacon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tocino $4.00" />
+
+    <CheckBox
+        android:id="@+id/checkMushrooms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Champiñones $6.00" />
+
+    <!-- Botón para realizar la orden -->
+    <Button
+        android:id="@+id/buttonOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#8A2BE2"
+        android:text="Ordenar"
+        android:textColor="#FFFFFF" />
+
+    <!-- TextView para mostrar la información de la orden -->
+    <TextView
+        android:id="@+id/textViewOrderSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+
+</LinearLayout>
